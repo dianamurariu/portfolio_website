@@ -1,0 +1,118 @@
+:root {
+  --main-color: #f72585;
+  --text-color-black: #000000;
+  --text-color-white: #ffffff;
+  --bg-color-light-mode: #fbfbfb;
+  --bg-color-dark-mode: #1e1e1e;
+  --bg-color-section: #f8f8f8;
+  --bg-color-footer: #545454;
+
+  --element-margin: 0 auto;
+  --element-width: 80%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--bg-color-light-mode);
+}
+
+button {
+  background-color: var(--main-color);
+  border-radius: 4px;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: var(--text-color-white);
+}
+button:hover {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  margin: var(--element-margin);
+  max-width: var(--element-width);
+  padding: 10px 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bg-color-footer);
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: var(--text-color-black);
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--bg-color-dark-mode);
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
