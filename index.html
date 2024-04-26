@@ -39,7 +39,7 @@
           <li><a href="#about_me">About Me</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimanials">Testimonials</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button type="button">Download CV</button>
@@ -253,10 +253,18 @@
           laborum incidunt maiores cupiditate nam et, reprehenderit.
         </p>
         <div class="projects_categories">
-          <button type="button" class="btn_category">All</button>
-          <button type="button" class="btn_category">React</button>
-          <button type="button" class="btn_category">Next.js</button>
-          <button type="button" class="btn_category">HTML/CSS/JS</button>
+          <button type="button" class="btn_category active" data-category="all">
+            All
+          </button>
+          <button type="button" class="btn_category" data-category="react">
+            React
+          </button>
+          <button type="button" class="btn_category" data-category="nextjs">
+            Next.js
+          </button>
+          <button type="button" class="btn_category" data-category="htmlcssjs">
+            HTML/CSS/JS
+          </button>
         </div>
         <div class="projects_display">
           <div class="project_wrapper" data-category="react">
@@ -284,18 +292,6 @@
               >
                 <h4>Online Shop</h4>
                 <p>E-commerce app built with Next.js, JS and CSS.</p>
-              </a>
-            </div>
-          </div>
-
-          <div class="project_wrapper" data-category="htmlcssjs">
-            <img src="./images/project-photo-app.png" alt="project_display" />
-            <div class="project_description">
-              <a href="https://photo-app-puce.vercel.app/" target="_blank">
-                <h4>Photo App</h4>
-                <p>
-                  Painting gallery website built with HTML, CSS, JS and JSON.
-                </p>
               </a>
             </div>
           </div>
@@ -349,6 +345,30 @@
           </div>
 
           <div class="project_wrapper" data-category="htmlcssjs">
+            <img src="./images/project-photo-app.png" alt="project_display" />
+            <div class="project_description">
+              <a href="https://photo-app-puce.vercel.app/" target="_blank">
+                <h4>Photo App</h4>
+                <p>
+                  Painting gallery website built with HTML, CSS, JS and JSON.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="project_wrapper" data-category="htmlcssjs">
+            <img src="./images/project-weather_app.png" alt="project_display" />
+            <div class="project_description">
+              <a
+                href="https://dianamurariu.github.io/Weather_app/"
+                target="_blank"
+              >
+                <h4>Weather App</h4>
+                <p>Weather app built with HTML, CSS, JS and JSON.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_wrapper" data-category="htmlcssjs">
             <img src="./images/project-calculator.png" alt="project_display" />
             <div class="project_description">
               <a
@@ -381,19 +401,6 @@
           </div>
 
           <div class="project_wrapper" data-category="htmlcssjs">
-            <img src="./images/project-weather_app.png" alt="project_display" />
-            <div class="project_description">
-              <a
-                href="https://dianamurariu.github.io/Weather_app/"
-                target="_blank"
-              >
-                <h4>Weather App</h4>
-                <p>Weather app built with HTML, CSS, JS and JSON.</p>
-              </a>
-            </div>
-          </div>
-
-          <div class="project_wrapper" data-category="htmlcssjs">
             <img src="./images/project-dino-game.jpg" alt="project_display" />
             <div class="project_description">
               <a
@@ -408,7 +415,76 @@
         </div>
       </section>
 
-      <section id="testimonials" class="testimonials"></section>
+      <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p class="section_introduction">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod
+          beatae alias culpa sit aperiam sunt libero, voluptate commodi vitae
+          laborum incidunt maiores cupiditate nam et, reprehenderit.
+        </p>
+        <div class="testimonials_container">
+          <div class="testimonial_wrapper active">
+            <div class="testimonial_content">
+              <img
+                src="./images/mentor_1.jpeg"
+                alt="picture_mentor"
+                width="100"
+                height="100"
+              />
+              <div class="testimonial_description">
+                <q class="pink">
+                  <span>
+                    Diana was my student in the Kreativstorm Front-end Web
+                    Development Training Program. She has proven that through
+                    hard work, follow-through, and teamwork, she can accomplish
+                    tasks in a courteous and timely manner. Her proactivity,
+                    good staging, and fast learning skills have prepared her
+                    beautifully for your organization.<br />
+                    <br />
+                    It was an absolute honor to watch how she grew over the
+                    duration of my course, and since then, have gained knowledge
+                    and practical experience as a front-end web developer. I
+                    have full confidence that Diana will be an asset to your
+                    company and help you reach new heights.
+                  </span>
+                </q>
+                <h4>Branko Popovic</h4>
+                <p>Full-Stack Web Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial_wrapper hidden">
+            <div class="testimonial_content">
+              <img
+                src="./images/mentor_2.jpeg"
+                alt="picture_mentor"
+                width="100"
+                height="100"
+              />
+              <div class="testimonial_description">
+                <q class="pink">
+                  <span>
+                    During the period of three months Diana was involved in
+                    front-end mentorship program in Createq company, which was
+                    held online. Throughout the whole period she was focused and
+                    fully involved. Really great researcher with demonstrated
+                    willingness to learn.
+                    <br />
+                    <br />
+                    Would recommend her gladely as a coworker!
+                  </span>
+                </q>
+                <h4>Mišel Tekinder</h4>
+                <p>FE Technical Lead & JAMStack Expert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial_stepper">
+          <div class="step active"></div>
+          <div class="step"></div>
+        </div>
+      </section>
 
       <section id="contact" class="contact">
         <h2>Lets Get In Touch</h2>
@@ -446,7 +522,7 @@
               <li><a href="#about_me">About Me</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#projects">Projects</a></li>
-              <li><a href="#testimanials">Testimonials</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
