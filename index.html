@@ -10,6 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -24,26 +36,284 @@
         </div>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about_me">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimanials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <button type="button">Download CV</button>
       </nav>
     </header>
 
     <main>
-      <section class="home"></section>
-      <section class="hero"></section>
-      <section class="about_me"></section>
-      <section class="services"></section>
-      <section class="projects"></section>
-      <section class="testimonials"></section>
-      <section class="contact"></section>
+      <section id="hero_header" class="hero_header">
+        <aside class="hero_left">
+          <div class="hero_title">
+            <h3>Hi I am</h3>
+            <h3 class="pink">Diana Murariu</h3>
+            <h1>Frontend Developer</h1>
+          </div>
+          <p class="hero_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+            sapiente aperiam atque cupiditate reprehenderit molestiae, illum
+            incidunt at exercitationem fugiat aliquam architecto id sit? Amet
+            deleniti voluptatem ducimus officia odio!
+          </p>
+          <button type="button">Hire Me</button>
+        </aside>
+
+        <aside class="hero_right">
+          <img
+            src="./images/diana.jpg"
+            alt="picture_of_diana"
+            class="hero_image"
+            width="300"
+            height="500"
+          />
+          <div class="social_icons">
+            <a href="mailto:dianageorgianamurariu@gmail.com" target="_blank">
+              <i class="fi fi-rr-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/murariu-diana/"
+              target="_blank"
+            >
+              <i class="fi fi-brands-linkedin"></i>
+            </a>
+            <a href="https://github.com/dianamurariu" target="_blank">
+              <i class="fi fi-brands-github"></i>
+            </a>
+            <a href="tel:+40766210260" target="_blank">
+              <i class="fi fi-rr-phone-call"></i>
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about_me" class="about_me">
+        <aside class="about_left">
+          <img
+            src="./images/diana.jpg"
+            alt="picture_of_diana"
+            class="about_image"
+            width="300"
+            height="500"
+          />
+        </aside>
+
+        <aside class="about_right">
+          <h2>About Me</h2>
+          <p class="about_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            saepe libero, quis vel officia praesentium accusantium id aliquid
+            explicabo exercitationem nemo velit dolorum magni. Repellat qui
+            porro iusto totam libero?
+          </p>
+          <img
+            src="./images/services.svg"
+            alt="picture of services"
+            width="550"
+            height="250"
+          />
+        </aside>
+      </section>
+
+      <section id="services" class="services">
+        <h2>Services</h2>
+        <p class="services_introduction">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+          doloremque veritatis ratione quos, non numquam aut nostrum!
+        </p>
+        <div class="services_container">
+          <div class="box">
+            <i class="fi fi-rr-magic-wand pink big_logo"></i>
+            <h4>Frontend Architecture & Design</h4>
+            <p class="service_desc">
+              Using the latest frontend technologies to create visually appeling
+              and responsive websites.
+            </p>
+          </div>
+          <div class="box">
+            <i class="fi fi-rs-diamond pink big_logo"></i>
+            <h4>UI/UX Development</h4>
+            <p class="service_desc">
+              Enhance customer engagement by creating intuitive and engaging
+              user interfaces optimized for various devices.
+            </p>
+          </div>
+          <div class="box">
+            <i class="fi fi-rr-computer pink big_logo"></i>
+            <h4>Web Development</h4>
+            <p class="service_desc">
+              Build robust digital platforms using modern frameworks, enhancing
+              user experiences through sleek design.
+            </p>
+          </div>
+          <div class="box">
+            <i class="fi fi-rr-browser pink big_logo"></i>
+            <h4>SPA Development</h4>
+            <p class="service_desc">
+              Develop high-performance web applications with modern features and
+              functionality to drive innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools">
+        <div class="tools-logo-listing-wrap">
+          <div class="infiniteslide_wrap">
+            <div class="tools-logo-listing">
+              <div class="logo-wrap">
+                <img src="./images/html.svg" alt="html_logo" />
+                <h4>HTML</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/css.svg" alt="css_logo" />
+                <h4>CSS</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/sass.svg" alt="sass_logo" />
+                <h4>Sass</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/bootstrap.svg" alt="bootstrap" />
+                <h4>Bootstrap</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/javascript.svg" alt="javascript_logo" />
+                <h4>Javascript</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/typescript.svg" alt="typescript_logo" />
+                <h4>Typescript</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/react.svg" alt="react_logo" />
+                <h4>React.js</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/next-js.svg" alt="next_logo" />
+                <h4>Next.js</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/angular.svg" alt="angular_logo" />
+                <h4>Angular</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/redux.svg" alt="redux_logo" />
+                <h4>Redux</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/json.svg" alt="json_logo" />
+                <h4>JSON</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/api.svg" alt="api_logo" />
+                <h4>Rest API</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/jest.svg" alt="jest_logo" />
+                <h4>Jest</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/figma.svg" alt="figma_logo" />
+                <h4>Figma</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/jira.svg" alt="jira_logo" />
+                <h4>Jira</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/git.svg" alt="git_logo" />
+                <h4>Git</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/wordpress.svg" alt="wordpress_logo" />
+                <h4>Wordpress</h4>
+              </div>
+              <div class="logo-wrap">
+                <img src="./images/microsoft-office.svg" alt="microsoft_logo" />
+                <h4>Microsoft Office</h4>
+              </div>
+            </div>
+          </div>
+          <div class="tools_title_wrap">
+            <h3 class="tools_title">Tools</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects"></section>
+
+      <section id="testimonials" class="testimonials"></section>
+
+      <section id="contact" class="contact">
+        <h2>Lets Get In Touch</h2>
+        <p class="contact-introduction">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          perferendis laborum, consequuntur nulla quasi architecto quos soluta
+          animi nesciunt ipsum maiores.
+        </p>
+        <form>
+          <label for="email"> Email :</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email here"
+            autocomplete="email"
+            autofocus
+          />
+          <button type="submit">Contact Me</button>
+        </form>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <section class="mainfooter">
+        <div class="mainfooter_content">
+          <div class="logo">
+            <a href="#"
+              ><img src="./images/logo.png" alt="logo" width="100" height="100"
+            /></a>
+          </div>
+          <nav class="stroke">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about_me">About Me</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#testimanials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="social_icons">
+            <a href="mailto:dianageorgianamurariu@gmail.com" target="_blank">
+              <i class="fi fi-rr-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/murariu-diana/"
+              target="_blank"
+            >
+              <i class="fi fi-brands-linkedin"></i>
+            </a>
+            <a href="https://github.com/dianamurariu" target="_blank">
+              <i class="fi fi-brands-github"></i>
+            </a>
+            <a href="tel:+40766210260" target="_blank">
+              <i class="fi fi-rr-phone-call"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="subfooter">
+        <p class="subfooter_content">
+          &copy 2024 <span class="pink">Diana Murariu</span> All Rights
+          Reserved, Inc.
+        </p>
+      </section>
+    </footer>
   </body>
 </html>
