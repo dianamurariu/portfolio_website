@@ -34,15 +34,12 @@ main {
   flex-direction: column;
   gap: 100px;
 }
-aside {
-  max-width: 600px;
-}
 h2 {
   font-size: 35px;
   font-weight: 600;
 }
 .section_introduction {
-  max-width: 800px;
+  max-width: 900px;
   font-size: 16px;
   text-align: center;
   color: var(--gray-color);
@@ -148,17 +145,12 @@ nav.fill ul li a:hover:after {
   -moz-animation: fill 1s forwards;
   opacity: 1;
 }
-.fi-rr-download {
-  font-size: 16px;
-  color: var(--white-color);
-}
 
 /* Hero Section */
 .hero_header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
 }
 .hero_left {
   margin-top: 100px;
@@ -196,10 +188,9 @@ nav.fill ul li a:hover:after {
 
 /* About Me Section */
 .about_me {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
 }
 .about_left {
   & .about_image {
@@ -207,11 +198,10 @@ nav.fill ul li a:hover:after {
   }
 }
 .about_right {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  & .about_description {
+  & .about_description p {
     font-size: 16px;
     color: var(--gray-color);
   }
@@ -314,9 +304,9 @@ nav.fill ul li a:hover:after {
 }
 .projects_display {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 30px;
-  grid-column-gap: 50px;
+  grid-column-gap: 30px;
 }
 .project_wrapper {
   background-color: var(--bg-color-section);
@@ -326,7 +316,7 @@ nav.fill ul li a:hover:after {
   gap: 10px;
   & img {
     width: 100%;
-    height: 300px;
+    height: 230px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -338,7 +328,7 @@ nav.fill ul li a:hover:after {
       font-weight: 400px;
     }
     & p {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--gray-color);
     }
   }
@@ -425,22 +415,31 @@ nav.fill ul li a:hover:after {
 }
 form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   gap: 10px;
-  margin-top: 30px;
-
-  & input[type='email'] {
-    max-width: 400px;
-    padding: 10px 16px;
+  & form label {
+    color: var(--gray-color);
   }
 }
-input[type='email'] {
-  width: 500px;
+.input_wrapper {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.form_input {
+  width: 550px;
   padding: 12px 16px;
 }
-input[type='email']::placeholder {
+.form_input::placeholder,
+textarea::placeholder {
   font-family: 'Poppins', Arial, sans-serif;
+}
+textarea {
+  height: 140px;
+  padding: 5px;
 }
 
 /* Footer */

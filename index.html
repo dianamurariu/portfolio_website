@@ -54,13 +54,17 @@
             <h3 class="pink">Diana Murariu</h3>
             <h1>Frontend Developer</h1>
           </div>
-          <p class="hero_description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            sapiente aperiam atque cupiditate reprehenderit molestiae, illum
-            incidunt at exercitationem fugiat aliquam architecto id sit? Amet
-            deleniti voluptatem ducimus officia odio!
-          </p>
-          <button type="button">Hire Me</button>
+          <div class="hero_description">
+            <p>
+              Crafting beautiful and user-friendly websites is my passion. Now,
+              I am on a mission to turn this passion into a career and bring
+              creativity and functionality together in every project I tackle.
+            </p>
+            <p>Let's build something amazing together!</p>
+          </div>
+          <a href="#contact">
+            <button type="button">Hire Me</button>
+          </a>
         </aside>
 
         <aside class="hero_right">
@@ -104,12 +108,18 @@
 
         <aside class="about_right">
           <h2>About Me</h2>
-          <p class="about_description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            saepe libero, quis vel officia praesentium accusantium id aliquid
-            explicabo exercitationem nemo velit dolorum magni. Repellat qui
-            porro iusto totam libero?
-          </p>
+          <div class="about_description">
+            <p>
+              Starting with coding in college, I have continuously improved my
+              skills through internships, coursework and hands-on projects. I
+              love building websites and integrating innovative features.
+            </p>
+            <p>
+              Quick learner, detail-oriented, problem-solver — I bring these to
+              the table. I am all about teamwork, believing in positive vibes
+              and hard work. I am eager to learn from others and grow every day.
+            </p>
+          </div>
           <img
             src="./images/services.svg"
             alt="picture of services"
@@ -122,8 +132,9 @@
       <section id="services" class="services">
         <h2>Services</h2>
         <p class="section_introduction">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-          doloremque veritatis ratione quos, non numquam aut nostrum!
+          Discover how I can contribute to your business goals. With diverse
+          skills and dedication, I am here to bring your vision to life using
+          the latest tools and technologies.
         </p>
         <div class="services_container">
           <div class="box">
@@ -191,7 +202,7 @@
               </div>
               <div class="logo-wrap">
                 <img src="./images/react.svg" alt="react_logo" />
-                <h4>React.js</h4>
+                <h4>React</h4>
               </div>
               <div class="logo-wrap">
                 <img src="./images/next-js.svg" alt="next_logo" />
@@ -247,11 +258,16 @@
 
       <section id="projects" class="projects">
         <h2>Projects</h2>
-        <p class="section_introduction">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod
-          beatae alias culpa sit aperiam sunt libero, voluptate commodi vitae
-          laborum incidunt maiores cupiditate nam et, reprehenderit.
-        </p>
+        <div class="section_introduction">
+          <p>
+            Dive into my projects showcasing my ongoing commitment to learning
+            and skills in action.
+          </p>
+          <p>
+            Click on the title to experience the live version of the app
+            firsthand.
+          </p>
+        </div>
         <div class="projects_categories">
           <button type="button" class="btn_category active" data-category="all">
             All
@@ -417,11 +433,12 @@
 
       <section id="testimonials" class="testimonials">
         <h2>Testimonials</h2>
-        <p class="section_introduction">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod
-          beatae alias culpa sit aperiam sunt libero, voluptate commodi vitae
-          laborum incidunt maiores cupiditate nam et, reprehenderit.
-        </p>
+        <div class="section_introduction">
+          <p>
+            Take a moment to read what people I had collaborated with have
+            shared about their experience with me.
+          </p>
+        </div>
         <div class="testimonials_container">
           <div class="testimonial_wrapper active">
             <div class="testimonial_content">
@@ -488,22 +505,55 @@
 
       <section id="contact" class="contact">
         <h2>Lets Get In Touch</h2>
-        <p class="section_introduction">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          perferendis laborum, consequuntur nulla quasi architecto quos soluta
-          animi nesciunt ipsum maiores.
-        </p>
-        <form>
-          <label for="email"> Email :</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email here"
-            autocomplete="email"
-            autofocus
-          />
-          <button type="submit">Contact Me</button>
+        <div class="section_introduction">
+          <p>
+            <span class="pink">Ready to connect ? </span>Reach out using the
+            form below ! Whether you have a question, a project idea or just
+            want to say hello, I am looking forward to hearing from you!
+          </p>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <div class="input_wrapper">
+            <input
+              type="hidden"
+              name="access_key"
+              value="22ca65ea-4e5e-4e40-b3c4-8fff2cff3b06"
+            />
+            <label for="name">Name :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form_input"
+              placeholder="Enter your name here"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="input_wrapper">
+            <label for="email"> Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form_input"
+              placeholder="Enter your email here"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="input_wrapper">
+            <label for="message">Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form_input"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
         </form>
       </section>
     </main>
