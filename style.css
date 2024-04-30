@@ -8,6 +8,7 @@
   --bg-color-section: #f8f8f8;
   --element-margin: 0 auto;
   --element-width: 80%;
+  --element-width-small: 90%;
 }
 
 /* Common styles */
@@ -70,6 +71,7 @@ button {
   color: var(--main-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 button:hover,
 button:active {
@@ -102,6 +104,13 @@ nav ul li a:before {
 }
 nav ul li a:hover {
   color: var(--black-color);
+}
+
+.right_btns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
 }
 
 /* stroke */
@@ -183,6 +192,8 @@ nav.fill ul li a:hover:after {
 
   & .hero_image {
     border-radius: 30px;
+    width: 300px;
+    height: 500px;
   }
 }
 
@@ -195,15 +206,21 @@ nav.fill ul li a:hover:after {
 .about_left {
   & .about_image {
     border-radius: 30px;
+    width: 300px;
+    height: 500px;
   }
 }
 .about_right {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   & .about_description p {
     font-size: 16px;
     color: var(--gray-color);
+  }
+  & .services_image {
+    width: 550px;
+    height: 250px;
   }
 }
 
@@ -458,4 +475,121 @@ textarea {
   background-color: var(--gray-color);
   padding: 20px 0;
   color: var(--white-color);
+}
+
+/* Light/Dark mode button  */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--main-color);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: var(--white-color);
+}
+
+.fa-sun {
+  color: var(--white-color);
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: var(--bg-color-dark-mode);
+}
+
+/* Common styles */
+.dark h2 {
+  color: var(--white-color);
+}
+.dark .section_introduction {
+  color: var(--white-color);
+}
+.dark .social_icons .fi {
+  font-size: 25px;
+  color: var(--white-color);
+}
+.dark .pink {
+  color: var(--main-color);
+}
+
+/* Dark navigation  */
+.dark a {
+  color: var(--bg-color-section);
+}
+.dark nav ul li a:hover {
+  color: var(--white-color);
+}
+.dark nav.stroke ul li a:after,
+.dark nav.fill ul li a:after {
+  background: var(--bg-color-section);
+}
+
+.dark nav.fill ul li a:hover {
+  color: var(--white-color);
+}
+
+/* Dark Hero Section */
+.dark h3 {
+  color: var(--white-color);
+}
+.dark h1 {
+  color: var(--white-color);
+}
+.dark .hero_description {
+  color: var(--white-color);
+}
+
+/* Dark About Me Section */
+
+.dark .about_description p {
+  color: var(--white-color);
+}
+
+/* Dark Tools */
+.dark .tools-logo-listing-wrap {
+  background-color: var(--gray-color);
+}
+.dark .logo-wrap h4 {
+  color: var(--white-color);
+}
+
+/* Dark Contact Section */
+
+.dark form label {
+  color: var(--white-color);
+}
+
+/* Footer */
+.dark .mainfooter {
+  background-color: var(--bg-color-dark-mode);
+}
+.dark .subfooter {
+  background-color: var(--black-color);
 }

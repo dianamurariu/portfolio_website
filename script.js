@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
         testimonial.classList.remove('active');
       });
 
-      // Show the clicked testimonial
       testimonial.classList.remove('hidden');
       testimonial.classList.add('active');
 
@@ -51,5 +50,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
       step.classList.add('active');
     });
+  });
+
+  // Light/dark mode button
+  const checkbox = document.getElementById('checkbox');
+  const servicesImage = document.getElementById('services-image');
+
+  checkbox.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      // Dark mode
+      document.body.classList.toggle('dark');
+      servicesImage.src = './images/services-dark-mode.svg';
+    } else {
+      // Light mode
+      document.body.classList.remove('dark');
+      servicesImage.src = './images/services.svg';
+    }
   });
 });

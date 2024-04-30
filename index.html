@@ -22,6 +22,10 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -42,7 +46,15 @@
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button type="button">Download CV</button>
+
+        <div class="light_dark_btn">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+          </label>
+        </div>
       </nav>
     </header>
 
@@ -62,9 +74,7 @@
             </p>
             <p>Let's build something amazing together!</p>
           </div>
-          <a href="#contact">
-            <button type="button">Hire Me</button>
-          </a>
+          <button type="button">Download CV</button>
         </aside>
 
         <aside class="hero_right">
@@ -101,8 +111,6 @@
             src="./images/diana.jpg"
             alt="picture_of_diana"
             class="about_image"
-            width="300"
-            height="500"
           />
         </aside>
 
@@ -123,8 +131,8 @@
           <img
             src="./images/services.svg"
             alt="picture of services"
-            width="550"
-            height="250"
+            id="services-image"
+            class="services_image"
           />
         </aside>
       </section>
@@ -507,7 +515,7 @@
         <h2>Lets Get In Touch</h2>
         <div class="section_introduction">
           <p>
-            <span class="pink">Ready to connect ? </span>Reach out using the
+            <strong class="pink">Ready to connect ? </strong>Reach out using the
             form below ! Whether you have a question, a project idea or just
             want to say hello, I am looking forward to hearing from you!
           </p>
