@@ -67,4 +67,35 @@ document.addEventListener('DOMContentLoaded', function () {
       servicesImage.src = './images/services.svg';
     }
   });
+
+  // Burger menu open/close
+  const mainMenu = document.querySelector('.mainMenu');
+  const closeButton = document.querySelector('.closeMenu');
+  const openMenuButton = document.querySelector('.openMenu');
+  const menuItems = document.querySelectorAll('.mainMenu li a');
+
+  const openMenu = function () {
+    mainMenu.classList.add('open');
+  };
+
+  const closeMenu = function () {
+    mainMenu.classList.remove('open');
+  };
+
+  const toggleMenu = function () {
+    if (mainMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  openMenuButton.addEventListener('click', toggleMenu);
+  closeButton.addEventListener('click', closeMenu);
+
+  menuItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
 });

@@ -65,6 +65,12 @@ h2 {
   font-size: 40px;
 }
 
+/* Burger Menu */
+nav .openMenu,
+nav .mainMenu .closeMenu {
+  display: none;
+}
+
 /* Global button  */
 button {
   background-color: transparent;
@@ -84,6 +90,12 @@ button:active {
 }
 
 /* Navigation  */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 ul {
   display: flex;
   flex-direction: row;
@@ -94,12 +106,6 @@ a {
   text-decoration: none;
   color: var(--gray-color);
   font-size: 16px;
-}
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 nav ul li a,
 nav ul li a:after,
@@ -407,6 +413,8 @@ nav.fill ul li a:hover:after {
   justify-content: center;
 }
 .step {
+  border: none;
+  padding: 0;
   width: 50px;
   height: 10px;
   border-radius: 30px;
@@ -417,6 +425,9 @@ nav.fill ul li a:hover:after {
   background-color: var(--main-color);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.1),
     0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.step:not(.active):hover {
+  background-color: var(--gray-color);
 }
 
 /* Contact Section */
@@ -619,22 +630,12 @@ body.dark {
   /* Navigation */
   header {
     position: relative;
-  }
-  ul {
-    order: 3;
-  }
-
-  nav {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-  }
-  .logo {
-    order: 1;
+    gap: 20px;
   }
   .light_dark_btn {
-    order: 2;
     position: absolute;
     top: 40px;
     right: 0;
@@ -809,26 +810,17 @@ body.dark {
   /* Navigation */
   header {
     position: relative;
-  }
-  ul {
-    order: 3;
-    display: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  .light_dark_btn {
+    display: none;
   }
   .logo {
-    order: 1;
-  }
-  .light_dark_btn {
-    order: 2;
-    position: absolute;
-    top: 40px;
-    right: 0;
+    margin: 0 auto;
   }
 
   /* Hero Section */
@@ -978,5 +970,44 @@ body.dark {
     & .subfooter p {
       font-size: 12px;
     }
+    & .subfooter_content {
+      text-align: center;
+    }
+  }
+  .mainfooter_content nav {
+    display: none;
+  }
+
+  /* Burger Menu */
+  nav .openMenu {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  nav .mainMenu {
+    padding: 50px;
+    position: fixed;
+    top: -100%;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color-section);
+    transition: top 0.5s ease;
+  }
+  nav .mainMenu.open {
+    top: 0;
+  }
+  nav .closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+  }
+  nav .mainMenu.open .closeMenu {
+    display: block;
   }
 }
