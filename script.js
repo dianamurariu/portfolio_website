@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Download CV Button
+  document
+    .getElementById('downloadButton')
+    .addEventListener('click', function () {
+      var link = document.createElement('a');
+      link.href =
+        'https://drive.google.com/uc?export=download&id=1xg3Gx76tmA0KdjpI27-GbWltwBYF6fmB';
+      link.download = 'Diana_Murariu_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
   // Projects Category Buttons
   const categoryButtons = document.querySelectorAll('.btn_category');
   const projectWrappers = document.querySelectorAll('.project_wrapper');
