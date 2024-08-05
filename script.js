@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .addEventListener('click', function () {
       var link = document.createElement('a');
       link.href =
-        'https://drive.google.com/uc?export=download&id=1RGBXUfyLovKfciZSzjP4pSjizBIHzFEl';
-      link.download = 'Diana_Murariu_CV.pdf';
+        'https://drive.google.com/uc?export=download&id=1FW8xwG7tzTwGpXF3Tc0T4BwPULkiScTq';
+      link.download = 'DianaMurariu_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

@@ -1,4 +1,4 @@
-# Portfolio Website 
+# Portfolio Website
 
 This project is my portfolio website, constructed with HTML, CSS and JavaScript. It acts as a dynamic showcase of the projects I've been working on, resembling an interactive CV. Tailored for web, tablet and mobile interfaces, it offers a seamless browsing experience. The website consists of a header, different sections (hero-header, about me, services, projects, testimonials, contact) and footer. Additionally, users can effortlessly switch between light and dark mode themes, ensuring accessibility and visual appeal across all platforms.
 
