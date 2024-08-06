@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     .addEventListener('click', function () {
       var link = document.createElement('a');
       link.href =
-        'https://drive.google.com/uc?export=download&id=1FW8xwG7tzTwGpXF3Tc0T4BwPULkiScTq';
+        'https://drive.google.com/uc?export=download&id=13_W1sXi4-ZCE9C8Bg5-Vbu9YZ3Fn0bQ2';
       link.download = 'DianaMurariu_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     });
+
   // Projects Category Buttons
   const categoryButtons = document.querySelectorAll('.btn_category');
   const projectWrappers = document.querySelectorAll('.project_wrapper');
